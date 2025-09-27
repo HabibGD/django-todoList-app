@@ -30,6 +30,3 @@ def index(request):
                 "tasks": request.session["tasks"], "formContent": NewtaskForm()
         })
     
-    return render(request, "tasks/index.html", {
-        "tasks": tasks, "formContent": NewtaskForm()
-    })
