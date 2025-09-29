@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="w-50 p-3  bottom-50 end-50">
+        <form method="post" class="row row-cols-lg-auto mb-3">
+            {% csrf_token %}
+            {{ form.title }}
+            {{ form.description }}
+            <input type="submit" name="" id="">
+        </form>
+    </div>
+{% endblock %}

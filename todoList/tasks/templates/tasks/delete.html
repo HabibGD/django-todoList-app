@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="w-50 p-3  bottom-50 end-50">
+        <p>Voulez vous Vraiment supprimer cette Tache : {{ task.title }}</p>
+        <form method="post" class="row row-cols-lg-auto mb-3">
+            {% csrf_token %}
+            
+        <button type="submit">Supprimer</button>
+        <button type=""><a href="{% url 'index' %}">Annuler</a></button>
+        </form>
+    </div>
+{% endblock %}
